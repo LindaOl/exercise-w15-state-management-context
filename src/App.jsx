@@ -1,3 +1,15 @@
+import { useTheme } from "./contexts/ThemeContext";
+import { Home } from "./components/Home";
+
 export const App = () => {
-  return <div className="App">Hello Coders!</div>;
+  const { theme } = useTheme();
+
+  return (
+
+    <div className={theme}>
+      Hello Coders!
+      <Home />
+    </div>
+
+  );
 };
